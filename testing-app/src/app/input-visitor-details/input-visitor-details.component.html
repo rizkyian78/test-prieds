@@ -1,0 +1,118 @@
+<ul class="nav">
+  <li class="nav-item">
+    <a class="nav-link" href="#">Menu</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="input-visitor-details">Customer Input</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="#">Customer List</a>
+  </li>
+</ul>
+<br />
+
+<div class="container">
+  <h4>Customer Input</h4>
+  <br />
+
+  <div class="input-group mb-3">
+    <div class="input-group-prepend">
+      <div class="input-group-text">Nama</div>
+    </div>
+    <input
+      type="text"
+      #nama
+      class="form-control"
+      aria-label="Text input with checkbox"
+    />
+  </div>
+
+  <div class="input-group mb-3">
+    <div class="input-group-prepend">
+      <div class="input-group-text">Umur</div>
+    </div>
+    <input
+      type="text"
+      #age
+      class="form-control"
+      aria-label="Text input with checkbox"
+    />
+  </div>
+
+  <div class="input-group mb-3">
+    <div class="input-group-prepend">
+      <div class="input-group-text">Kelamin</div>
+    </div>
+    <input
+      type="text"
+      #gender
+      class="form-control"
+      aria-label="Text input with checkbox"
+    />
+  </div>
+
+  <div class="input-group mb-3">
+    <div class="input-group-prepend">
+      <div class="input-group-text">Pekerjaan</div>
+    </div>
+    <input
+      type="text"
+      #job
+      class="form-control"
+      aria-label="Text input with checkbox"
+    />
+  </div>
+
+  <div class="input-group mb-3">
+    <div class="input-group-prepend">
+      <div class="input-group-text">Alamat</div>
+    </div>
+    <input
+      type="text"
+      #address
+      class="form-control"
+      aria-label="Text input with checkbox"
+    />
+  </div>
+
+  <div class="input-group mb-3">
+    <div class="input-group-prepend">
+      <div class="input-group-text">Telp</div>
+    </div>
+    <input
+      type="text"
+      #nomor
+      class="form-control"
+      aria-label="Text input with checkbox"
+    />
+  </div>
+
+  <div class="input-group mb-3">
+    <div class="input-group-prepend">
+      <div class="input-group-text">Keluhan</div>
+    </div>
+    <input
+      type="text"
+      #disease
+      class="form-control"
+      aria-label="Text input with checkbox"
+    />
+  </div>
+  <button
+    type="button"
+    (click)="
+      onSubmit({
+        nomor: nomor.value,
+        disease: disease.value,
+        address: address.value,
+        job: job.value,
+        gender: gender.value,
+        age: age.value,
+        nama: nama.value
+      })
+    "
+    class="btn btn-primary"
+  >
+    Submit And Get Ticket
+  </button>
+</div>
